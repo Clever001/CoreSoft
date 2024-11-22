@@ -1,10 +1,81 @@
+// Фирменные цвета
 @my_blue: #4147C2;
 @my_purple: #8333BD;
 @my_green: #27AFAF;
+
+// Фоновые цвета
+@my_white: #FFF;
+@my_gray: #F2F2F2;
+
 @title_font: Montserrat;
 @major_font: Roboto;
 
+body {
+    background-color: @my_white;
+    font-family: @major_font;
+}
 
+.row {
+    margin: 30px 0;
+}
+
+.header {
+    background-color: @my_blue;
+    color: @my_white;
+    margin: 0;
+    justify-content: center; /* Центрирует содержимое по горизонтали */  
+    align-items: center;     /* Центрирует содержимое по вертикали */
+    height: 8vh !important;
+
+    .logo img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .title {
+        text-align: center;
+        margin: auto;
+    }
+    .titles div {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        // border: 2px solid red;
+        align-content: center;
+        height: 100%;
+        width: 24%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    .action-btn-parent { 
+        justify-content: center; /* Горизонтальное выравнивание */  
+        align-items: center; /* Вертикальное выравнивание*/
+    }
+
+    .action-btn {
+
+        background-color: @my_green;
+        color: @my_white;
+        border: none;
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+
+    .menu {
+        display:block;
+        align-items: center; /* Вертикальное выравнивание по центру */  
+        justify-content: center; /* Горизонтальное выравнивание по центру (опционально) */
+    }
+}
+
+.footer {
+    margin: 30px 0 0 0; 
+    height: 1000px;
+    background: 1000px;
+}
+
+/*
 div.row {
     border: 2px solid #000000;
     padding: 5px;
@@ -14,3 +85,5 @@ div.row {
     border: 1px solid red;
     font-family: @title_font;
 }
+*/
+
