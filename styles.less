@@ -1,3 +1,6 @@
+// Подключение шрифтов
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 // Фирменные цвета
 @my_blue: #4147C2;
 @my_purple: #8333BD;
@@ -7,83 +10,133 @@
 @my_white: #FFF;
 @my_gray: #F2F2F2;
 
-@title_font: Montserrat;
-@major_font: Roboto;
+@title_font: Montserrat, sans-serif;
+@major_font: Roboto, sans-serif;
+
+// Некоторые размеры
+@header_height: max(6.8vh, 60px);
+@padding_size: 30px;
 
 body {
     background-color: @my_white;
-    font-family: @major_font;
 }
 
 .row {
-    margin: 30px 0;
+    padding: @padding_size 0;
 }
 
 .header {
+    position: fixed;
+    display:flex;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
     background-color: @my_blue;
     color: @my_white;
-    margin: 0;
-    justify-content: center; /* Центрирует содержимое по горизонтали */  
-    align-items: center;     /* Центрирует содержимое по вертикали */
-    height: 8vh !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding: 0 !important;
+    justify-content: space-between;
+    align-items: center;
+    height: @header_height !important;
+    font-family: @title_font;
 
     .logo img {
-        width: 100%;
-        height: 100%;
+        width: @header_height;
+        height: @header_height;
     }
 
     .title {
         text-align: center;
-        margin: auto;
+        font-weight: 600;
+        @media (min-width: 992px) {
+            font-size: 24px;
+        }
+        @media (min-width: 1200px) {
+            font-size: 32px;
+        }
+        @media (min-width: 1400px) {
+            font-size: 36px;
+        }
     }
-    .titles div {
+    .titles > div {
         display: inline-block;
         margin: 0;
         padding: 0;
-        // border: 2px solid red;
         align-content: center;
-        height: 100%;
-        width: 24%;
+        height: @header_height;
+        width: 100%;
         text-align: center;
+        word-spacing: 1.5vw;
         box-sizing: border-box;
+        font-weight: 400;
+        @media (min-width: 992px) {
+            font-size: 20px;
+        }
+        @media (min-width: 1200px) {
+            font-size: 24px;
+        }
+        a {
+            color: #fff;
+            text-decoration: none;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
     }
     .action-btn-parent { 
-        justify-content: center; /* Горизонтальное выравнивание */  
-        align-items: center; /* Вертикальное выравнивание*/
+        justify-content: center; // Горизонтальное выравнивание  
+        align-items: center; // Вертикальное выравнивание
+        font-weight: 400;
     }
 
     .action-btn {
-
         background-color: @my_green;
-        color: @my_white;
         border: none;
+        color: #fff;
+        height: calc(@header_height * 0.65);
+        width: min(90%, 190px);
+        border-radius: 20px;
         &:hover {
-            opacity: 0.9;
+            opacity: 0.8;
         }
     }
 
     .menu {
         display:block;
-        align-items: center; /* Вертикальное выравнивание по центру */  
-        justify-content: center; /* Горизонтальное выравнивание по центру (опционально) */
+        text-align: center;
+        align-items: center; // Вертикальное выравнивание по центру  
+        justify-content: center; // Горизонтальное выравнивание по центру
+    }
+}
+
+.start {
+    margin-top: calc(@header_height) !important;
+    background-color: @my_gray;
+
+    
+
+    .start-img {
+        width:100%;
+        border-radius: 35px;
     }
 }
 
 .footer {
     margin: 30px 0 0 0; 
     height: 1000px;
-    background: 1000px;
 }
 
-/*
-div.row {
-    border: 2px solid #000000;
-    padding: 5px;
-    margin: 30px 0;
-}
-[class^="col-"] {
-    border: 1px solid red;
-    font-family: @title_font;
-}
-*/
+
+// div.row {
+//     border: 2px solid #000000;
+//     padding: 5px;
+//     margin: 30px 0;
+// }
+// [class^="col-"] {
+//     border: 1px solid red;
+//     // font-family: @title_font;
+//     box-sizing: border-box;
+// }
+
 
