@@ -31,7 +31,7 @@ body {
     top: 0;
     width: 100%;
     z-index: 1000;
-    background-color: @my_blue;
+    background: linear-gradient(90deg, @my_blue, @my_purple);
     color: @my_white;
     margin-top: 0 !important;
     margin-bottom: 0 !important;
@@ -98,7 +98,7 @@ body {
         width: min(90%, 190px);
         border-radius: 20px;
         &:hover {
-            opacity: 0.8;
+            opacity: 0.9;
         }
     }
 
@@ -113,7 +113,7 @@ body {
 .start {
     @spacing: 7%;
 
-    margin-top: calc(@header_height) !important;
+    margin-top: @header_height !important;
     background-color: @my_gray;
     font-family:@title_font;
     font-weight:500;
@@ -169,6 +169,66 @@ body {
     .start-img {
         width:100%;
         border-radius: 35px;
+    }
+}
+
+.supported {
+    text-align: center;
+
+    .title {
+        font-weight: 500;
+        font-style: @title_font;
+        font-size: 26px;
+        @media (min-width: 576px) {
+            font-size: 32px;
+        }
+        @media (min-width: 1200px) {
+            font-size: 40px;
+        }
+    }
+
+    .subtitle {
+        font-weight: 400;
+        font-style: @title_font;
+        font-size: 16px;
+        @media (min-width: 576px) {
+            font-size: 20px;
+        }
+        @media (min-width: 1200px) {
+            font-size: 24px;
+        }
+    }
+
+    .my-card {
+        background: @my_blue;
+        border-radius: 20%; /* Сделаем закругление, чтобы карточки выглядели лучше */
+        margin: 15px; /* Отступ между карточками */
+        width: max(150px, 18vh); /* Фиксированная ширина */
+        height: max(150px, 18vh); /* Фиксированная высота */
+        display: flex;
+        flex-direction: column; /* Чтобы текст был под картинкой */
+        justify-content: center;
+        align-items: center;
+        // box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Легкая тень для визуального эффекта */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Анимация при наведении */
+
+        &:hover {
+            transform: translateY(-5px); /* Легкий подъем при наведении */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Увеличение тени */
+            background: @my_purple;
+        }
+
+        img {
+            height: 60%;
+            width: auto;
+        }
+
+        .name {
+            color: @my_white;
+            font-size: 16px;
+            font-weight: 500;
+            font-size: 24px;
+        }
     }
 }
 
