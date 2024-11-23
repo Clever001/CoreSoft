@@ -5,6 +5,7 @@
 @my_blue: #4147C2;
 @my_purple: #8333BD;
 @my_green: #27AFAF;
+@my_dark: #464646;
 
 // Фоновые цвета
 @my_white: #FFF;
@@ -228,6 +229,69 @@ body {
             font-size: 16px;
             font-weight: 500;
             font-size: 24px;
+        }
+    }
+}
+
+.advantages {
+    background: @my_gray;
+
+    .main-title {
+        font-family: @header_height;
+        font-weight: 500;
+        text-align: center;
+        font-size: 26px;
+        @media (min-width: 576px) {
+            font-size: 32px;
+        }
+        @media (min-width: 1200px) {
+            font-size: 40px;
+        }
+    }
+
+    .my_card {
+        background: @my_dark;
+        color: @my_white;
+        border-radius: max(38px, 5vh);
+        margin: 15px;
+        padding: 30px;
+
+        // width: 400px;
+        height: 300px;
+
+        @media (max-width: 575px) {
+            height: 250px;
+        }
+
+        display: flex;
+        flex-direction: column;
+
+        .top {
+            display: flex;
+            flex-direction: row;
+
+            .title {
+                margin-left: 15px;
+                font-family: @title_font;
+                font-weight: 600;
+                font-size: 24px;
+                @media (min-width: 768px) {
+                    font-size: 24px;
+                }
+                @media (min-width: 1200px) {
+                    font-size: 28px;
+                }
+            }
+        }
+
+        .text {
+            margin-top: 10px;
+            font-family: @title_font;
+            font-weight: 400;
+            font-size: 16px;
+            @media (min-width: 992px) {
+                font-size: 20px;
+            }
         }
     }
 }
