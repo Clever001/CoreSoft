@@ -327,7 +327,8 @@ body {
     }
 
     .slide-content {
-        padding-left: 60px;
+        font-style: @major_font;
+        padding-left: 5vw;
         width: 100%;
         min-width: 450px;
         color: white;
@@ -336,16 +337,23 @@ body {
         border-radius: 45px;
         background: @my_blue;
         display: flex;
-        // align-items: center;
         justify-content:center;
         flex-direction: column;
         
         img {
             border-radius: 50%;
-            height: 20vh;
-            width: 20vh;
-            min-height: 150px;
-            min-width: 150px;
+            height: 14vh;
+            width: 14vh;
+        }
+
+        > p {
+            font-size: 20px;
+            @media (min-width: 576px) {
+                font-size: 24px;
+            }
+            @media (min-width: 768px) {
+                font-size: 26px;
+            }
         }
 
         .top {
@@ -353,27 +361,32 @@ body {
             flex-direction: row;
             margin-bottom: 5vh;
 
-
             .column {
                 h3 {
                     font-size: 20px;
                     @media (min-width: 576px) {
                         font-size: 32px;
                     }
-                    @media (min-width: 992px) {
+                    @media (min-width: 768px) {
                         font-size: 36px;
-                    }
-                    @media (min-width: 1200px) {
-                        font-size: 32px;
                     }
                     @media (min-width: 1400px) {
-                        font-size: 36px;
+                        font-size: 40px;
+                    }
+                }
+                p {
+                    font-size: 16px;
+                    @media (min-width: 576px) {
+                        font-size: 24px;
+                    }
+                    @media (min-width: 768px) {
+                        font-size: 26px;
                     }
                 }
 
                 display:flex;
                 flex-direction: column;
-                margin-left: 10vh;
+                margin-left: 5vw;
             }
         }
     }
