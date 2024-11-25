@@ -130,9 +130,9 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid slider">
+        <div class="container-fluid slider-block">
             <div class="container">
-                <div class="row">
+                <div class="row slider-row">
                     <div class="col-12 title">11 из 10 разработчиков выбирают CoreSoft</div>
                     <div class="col-12 slider-body swiper-container">
                         <div class="swiper-wrapper">
@@ -195,14 +195,17 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const swiper = new Swiper('.swiper-container', {
-                slidesPerView: 1, // Количество видимых слайдов
-                spaceBetween: 30, // Расстояние между слайдами
-                centeredSlides: true, // Централизовать активный слайд
-                loop: true, // Зацикливание
-                slideVisibleClass: 'swiper-slide-visible', // Класс для видимых слайдов
+        const swiper = new Swiper('.slider-body', {
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
             });
-        });
+
     </script>
 </html>

@@ -304,7 +304,7 @@ body {
     }
 }
 
-.slider {
+.slider-block {
     .title {
         text-align: center;
         font-style: @title_font;
@@ -319,105 +319,26 @@ body {
         margin-bottom: calc(@padding_size / 2);
     }
 
-    .swiper-container {
-        display: flex;
-        color: @my_white;
-        justify-content: center;
-        align-items: center;
-        font-style: @title_font;
-        background: @my_blue;
-        border-radius: max(38px, 5vh);
-        position: relative;
-
-                /* Стрелки: общие стили */
-        .swiper-button-prev,
-        .swiper-button-next {
-            color: #fff; /* Белый цвет */
-            position: absolute;
-            top: 50%; /* Центрируем по вертикали */
-            transform: translateY(-50%); /* Корректируем смещение */
-            z-index: 1000; /* Помещаем выше слайдов */
-            background-color: rgba(255, 255, 255, 0.2); /* Легкий фон */
-            border-radius: 50%;
-            width: 40px; /* Размер кнопки */
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-
-        /* Позиционирование стрелок */
-        .swiper-button-prev {
-            left: 10px; /* Отступ слева */
-        }
-
-        .swiper-button-next {
-            right: 10px; /* Отступ справа */
-        }
-
-        /* Наведение: изменение цвета и увеличение */
-        .swiper-button-prev:hover,
-        .swiper-button-next:hover {
-            background-color: rgba(255, 255, 255, 0.5);
-            transform: translateY(-50%) scale(1.1);
-        }
-
-        /* Иконки стрелок */
-        .swiper-button-prev::after,
-        .swiper-button-next::after {
-            font-size: 20px; /* Размер стрелки */
-            font-weight: bold;
-        }
-
+    .slider-body {
+        box-sizing: border-box;
         width: 100%;
-        height: 300px;
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
-        .swiper-slide {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            color: #fff;
-            visibility: hidden; /* Скрыть */
-            // opacity: 0; /* Сделать полностью прозрачными */
-            // transition: opacity 0.3s ease; /* Добавить плавный переход */
-
-            .slide-content img {
-                border-radius: 50%;
-                width: 100px;
-                height: 100px;
-                margin-bottom: 20px;
-            }
-            
-            .slide-content h3 {
-                margin: 10px 0;
-                font-size: 18px;
-                font-weight: bold;
-            }
-            
-            .slide-content p {
-                font-size: 14px;
-                margin: 5px 0;
-            }
-        }
-        .swiper-slide-visible {
-            visibility: visible !important; /* Сделать видимыми */
-            // opacity: 1; /* Полностью непрозрачные */
-        }
-    }
-    
-    .swiper-pagination-bullet {
-        background: #fff;
-        opacity: 0.6;
-    }
-    
-    .swiper-pagination-bullet-active {
-        opacity: 1;
+        overflow: hidden;
     }
 
+    .swiper-slide {
+        visibility: collapse;
+    }
+    .swiper-slide-active {
+        visibility: visible;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next,
+    .swiper-pagination {
+        top: -200px;
+        z-index: 10000;
+        position: relative;
+    }
 }
 
 .action {
