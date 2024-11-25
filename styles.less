@@ -111,11 +111,22 @@ body {
         }
     }
 
-    .menu {
+    .menu-open {
         display:block;
         text-align: center;
-        align-items: center; // Вертикальное выравнивание по центру  
-        justify-content: center; // Горизонтальное выравнивание по центру
+        align-items:center; // Вертикальное выравнивание по центру  
+        justify-content:center; // Горизонтальное выравнивание по центру
+
+        button {
+            background:@my_green !important;
+            border-radius: 20px;
+            border: none;
+            height: calc(@header_height * 0.65);
+            width: max(75%, 100px);
+            &:hover {
+                opacity: 0.9;
+            }
+        }
     }
 }
 
