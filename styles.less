@@ -353,8 +353,10 @@ body {
         
         img {
             border-radius: 50%;
-            height: 14vh;
-            width: 14vh;
+            height: 15vh;
+            width: 15vh;
+            min-width: 130px;
+            min-height: 130px;
         }
 
         > p {
@@ -420,12 +422,52 @@ body {
         transform: translateX(50%);
         z-index: 1000;
         color: @my_white;
+        @media (max-width: 767px) {
+            &::after {
+                transform: translateX(1500%) translateY(720%);
+                font-size: 25px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            &::after {
+                transform: translateX(1300%) translateY(720%);
+                font-size: 25px;
+            }
+        }
+
+        @media (max-width: 505px) {
+            &::after {
+                transform: translateX(1200%) translateY(720%);
+                font-size: 25px;
+            }
+        }
     }
 
     .swiper-button-next {
         transform: translateX(-50%);
         z-index: 1000;
         color: @my_white;
+        @media (max-width: 767px) {
+            &::after {
+                transform: translateX(-1500%) translateY(720%);
+                font-size: 25px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            &::after {
+                transform: translateX(-1300%) translateY(720%);
+                font-size: 25px;
+            }
+        }
+
+        @media (max-width: 505px) {
+            &::after {
+                transform: translateX(-1200%) translateY(720%);
+                font-size: 25px;
+            }
+        }
     }
 
     .swiper-pagination {
