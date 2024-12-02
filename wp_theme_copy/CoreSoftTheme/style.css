@@ -18,7 +18,7 @@
     src: url('resources/fonts/Roboto/Roboto-Light.ttf') format('truetype');
   }
   body {
-    background-color: #464646;
+    background-color: #fff;
   }
   .row {
     padding: 30px 0;

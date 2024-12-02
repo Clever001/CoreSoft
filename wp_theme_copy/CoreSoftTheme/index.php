@@ -8,11 +8,11 @@
 
         <link rel="icon" href="<?php echo get_stylesheet_directory_uri() ?>/resources/svg/logo.svg">
         <!-- <link rel="stylesheet/less" type="text/css" href="styles.less"> -->
-        <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/style.css">
+        <!-- <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/style.css"> -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-
+        <?php wp_head() ?>
     </head>
     <body>
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -233,4 +233,5 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="<?php echo get_stylesheet_directory_uri() ?>/resources/javascript/slider.js"></script>
+    <?php wp_footer() ?>
 </html>
