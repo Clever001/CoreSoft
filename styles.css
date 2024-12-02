@@ -208,7 +208,7 @@ body {
 }
 .supported .title {
   font-weight: 500;
-  font-style: Montserrat, sans-serif;
+  font-family: Montserrat, sans-serif;
   font-size: 26px;
 }
 @media (min-width: 576px) {
@@ -223,7 +223,7 @@ body {
 }
 .supported .subtitle {
   font-weight: 400;
-  font-style: Montserrat, sans-serif;
+  font-family: Montserrat, sans-serif;
   font-size: 16px;
 }
 @media (min-width: 576px) {
@@ -343,7 +343,7 @@ body {
 }
 .slider-block .title {
   text-align: center;
-  font-style: Montserrat, sans-serif;
+  font-family: Montserrat, sans-serif;
   font-weight: 500;
   font-size: 24px;
   margin-bottom: calc(30px / 2);
@@ -364,7 +364,7 @@ body {
   align-items: center;
 }
 .slider-block .slide-content {
-  font-style: Roboto, sans-serif;
+  font-family: Roboto, sans-serif;
   font-weight: 400;
   padding-left: 5vw;
   width: 100%;
@@ -509,7 +509,7 @@ body {
   text-align: center;
 }
 .action .title {
-  font-style: Montserrat, sans-serif;
+  font-family: Montserrat, sans-serif;
   font-weight: 500;
   font-size: 24px;
 }
@@ -524,7 +524,7 @@ body {
   }
 }
 .action .subtitle {
-  font-style: Roboto, sans-serif;
+  font-family: Roboto, sans-serif;
   font-weight: 400;
   font-size: 16px;
   margin-bottom: calc(30px / 2);
@@ -553,7 +553,7 @@ body {
   border: none;
   height: 70px;
   border-radius: 25px;
-  font-style: Roboto, sans-serif;
+  font-family: Roboto, sans-serif;
   font-weight: 400;
   font-size: 24px;
   transition: transform 0.3s ease;
@@ -594,7 +594,7 @@ body {
 }
 .footer .text {
   text-align: center;
-  font-style: Roboto, sans-serif;
+  font-family: Roboto, sans-serif;
   font-weight: 300;
   font-size: 16px;
 }

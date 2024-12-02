@@ -7,5 +7,5 @@
 
 ```powershell
 docker build --no-cache -t less-compiler .
-docker-compose up
+docker run --rm -v "${PWD}:/app" less-compiler
 ```

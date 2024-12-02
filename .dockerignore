@@ -5,3 +5,4 @@ node_modules
 *.svg
 *.png
 *.DS_Store
+/wp_data/
